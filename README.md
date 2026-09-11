@@ -5,7 +5,6 @@ Homebrew tap for [MiniTune](https://minitune.app/), the menu bar and notch music
 ## Install
 
 ```sh
-brew trust dinesh-madhavan/minitune
 brew tap dinesh-madhavan/minitune
 brew install --cask minitune
 ```
