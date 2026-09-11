@@ -9,7 +9,7 @@ cask "minitune" do
 
   livecheck do
     url "https://downloads.minitune.app/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: :tahoe
