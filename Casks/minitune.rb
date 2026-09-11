@@ -1,0 +1,34 @@
+cask "minitune" do
+  version "1.0.6"
+  sha256 "5d954446f5aa9e65f94485daae644afe29e29cd849b19e101d20a9ca8bb348f2"
+
+  url "https://downloads.minitune.app/releases/MiniTune-20260911-001526.dmg"
+  name "MiniTune"
+  desc "Menu bar and notch music player for YouTube, Apple Music, Spotify and your own files"
+  homepage "https://minitune.app/"
+
+  livecheck do
+    url "https://downloads.minitune.app/appcast.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :tahoe"
+
+  app "MiniTune.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.dineshmadhavan.minitune",
+    "~/Library/Application Scripts/com.dineshmadhavan.minitune.safari-extension",
+    "~/Library/Application Support/MiniTune",
+    "~/Library/Caches/MiniTune",
+    "~/Library/Caches/com.dineshmadhavan.minitune",
+    "~/Library/Containers/com.dineshmadhavan.minitune",
+    "~/Library/Containers/com.dineshmadhavan.minitune.safari-extension",
+    "~/Library/Group Containers/group.com.dineshmadhavan.minitune",
+    "~/Library/HTTPStorages/com.dineshmadhavan.minitune",
+    "~/Library/HTTPStorages/com.dineshmadhavan.minitune.binarycookies",
+    "~/Library/Logs/MiniTune",
+    "~/Library/Logs/MiniTune-*.log",
+    "~/Library/Preferences/com.dineshmadhavan.minitune.plist",
+  ]
+end
