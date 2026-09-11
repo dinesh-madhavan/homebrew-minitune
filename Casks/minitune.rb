@@ -1,15 +1,17 @@
 cask "minitune" do
-  version "1.0.6"
+  version "1.0.6,20260911-001526"
   sha256 "5d954446f5aa9e65f94485daae644afe29e29cd849b19e101d20a9ca8bb348f2"
 
-  url "https://downloads.minitune.app/releases/MiniTune-20260911-001526.dmg"
+  url "https://downloads.minitune.app/releases/MiniTune-#{version.csv.second}.dmg"
   name "MiniTune"
   desc "Notch and menu bar player for YouTube, Apple Music, Spotify and your own files"
   homepage "https://minitune.app/"
 
   livecheck do
     url "https://downloads.minitune.app/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.url[/MiniTune-(\d{8}-\d{6})\.dmg/i, 1]}"
+    end
   end
 
   depends_on macos: :tahoe
