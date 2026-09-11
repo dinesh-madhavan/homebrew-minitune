@@ -4,7 +4,7 @@ cask "minitune" do
 
   url "https://downloads.minitune.app/releases/MiniTune-20260911-001526.dmg"
   name "MiniTune"
-  desc "Menu bar and notch music player for YouTube, Apple Music, Spotify and your own files"
+  desc "Notch and menu bar player for YouTube, Apple Music, Spotify and your own files"
   homepage "https://minitune.app/"
 
   livecheck do
@@ -12,7 +12,7 @@ cask "minitune" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "MiniTune.app"
 
@@ -20,8 +20,8 @@ cask "minitune" do
     "~/Library/Application Scripts/com.dineshmadhavan.minitune",
     "~/Library/Application Scripts/com.dineshmadhavan.minitune.safari-extension",
     "~/Library/Application Support/MiniTune",
-    "~/Library/Caches/MiniTune",
     "~/Library/Caches/com.dineshmadhavan.minitune",
+    "~/Library/Caches/MiniTune",
     "~/Library/Containers/com.dineshmadhavan.minitune",
     "~/Library/Containers/com.dineshmadhavan.minitune.safari-extension",
     "~/Library/Group Containers/group.com.dineshmadhavan.minitune",
