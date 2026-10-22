@@ -1,6 +1,6 @@
 cask "minitune" do
-  version "1.0.31,20261021-180457"
-  sha256 "7aa9a9f4708a1bdd9b560e0e61fef030ceae0f7d347e32a54465f1dca7fdbecd"
+  version "1.0.32,20261023-015502"
+  sha256 "15aeb1c03278176ad72aeed7b4b9ae3fd204edf9d6234fecb77b720a673a6a9a"
 
   url "https://downloads.minitune.app/releases/MiniTune-#{version.csv.second}.dmg"
   name "MiniTune"
